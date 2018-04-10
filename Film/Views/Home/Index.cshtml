@@ -1,0 +1,46 @@
+﻿<div class="row">
+    <div class="col-sm-8 col-md-offset-2">
+        <ul id="resultArea"></ul>
+    </div>
+</div>
+@section scripts{ 
+<script type="text/javascript">
+    $(document).ready(function () {
+        $.ajax({
+            type: "GET",
+            url: "/api/collection/",
+            dataType: "json",
+            success: function (result) {
+                var output = "";
+                $.each(result, function (index, item) {
+                    output = index + ' ' + item;
+                    $("ul#resultArea").append($("<ul id=" + index + ">"))
+
+                    $.each(item, function (subindex, movieTitle) {
+                        if (subindex == "Name") {
+                            $("ul#" + index).append("<li id='movie" + index + "'>" + movieTitle)
+                            //console.log(movieTitle)
+                        } else {
+                            $("li#movie" + index).append("<ul id='role" + index + "'>")
+                            $.each(movieTitle, function (innerIndex, innerItem) {
+                                $("ul#role" + index).append("<li>" + innerItem["Actor"] + " protrays" + innerItem["Name"] + "</li>")
+
+                                console.log(innerItem["Actor"] + ","  + innerItem["Name"])
+                            })
+                            $("li#movie" + index).append("</ul>")
+
+                        }
+                        $("ul#" + index).append("</li>")
+                    })
+                });
+                   
+            },
+            error: function (data) {
+                alert("Error ");
+            }
+        });
+
+    });
+
+    </script>
+}
