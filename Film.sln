@@ -1,0 +1,37 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.27428.2005
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Film", "Film\Film.csproj", "{DA5CDCCA-32C5-458A-AF57-3E4F89C7DB04}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Film.Services", "Film.Services\Film.Services.csproj", "{75C2764D-99B4-44EA-854C-C9E3B67C485C}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Film.Test", "Film.Test\Film.Test.csproj", "{14DE8A41-DE79-4DE1-84B3-11E071DD751F}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{DA5CDCCA-32C5-458A-AF57-3E4F89C7DB04}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DA5CDCCA-32C5-458A-AF57-3E4F89C7DB04}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DA5CDCCA-32C5-458A-AF57-3E4F89C7DB04}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DA5CDCCA-32C5-458A-AF57-3E4F89C7DB04}.Release|Any CPU.Build.0 = Release|Any CPU
+		{75C2764D-99B4-44EA-854C-C9E3B67C485C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{75C2764D-99B4-44EA-854C-C9E3B67C485C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{75C2764D-99B4-44EA-854C-C9E3B67C485C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{75C2764D-99B4-44EA-854C-C9E3B67C485C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{14DE8A41-DE79-4DE1-84B3-11E071DD751F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{14DE8A41-DE79-4DE1-84B3-11E071DD751F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{14DE8A41-DE79-4DE1-84B3-11E071DD751F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{14DE8A41-DE79-4DE1-84B3-11E071DD751F}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {9DB929D3-EC87-4932-9D26-633511B3DF67}
+	EndGlobalSection
+EndGlobal
