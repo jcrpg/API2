@@ -22,24 +22,10 @@ namespace Film.Controllers
             var service = new StringService(new MovieService());
             var output = service.GetAscendingOrder();
 
-            //var result = await new MovieService().GetItemList();
-            //var restut  = new StringService(new MobieService());
-            //result.GetAscendingOrder
-            //var roles = result.SelectMany(s => s.Roles).OrderBy(m=> m.Name).OrderBy(o => o.Name).GroupBy(g=> g.Actor).Select(s=> new Actor(){ Name = s.Key, Roles = s.ToList() });
-
             return output;
 
         }
-        //public IEnumerable<string> Get()
-        //{
-        //    return new string[] { "value1", "value2" };
-        //}
 
-        //// GET api/<controller>/5
-        //public string Get(int id)
-        //{
-        //    return "value";
-        //}
 
         // POST api/<controller>
         public void Post([FromBody]string value)

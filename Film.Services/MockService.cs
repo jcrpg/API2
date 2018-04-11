@@ -18,8 +18,9 @@ namespace Film.Services
 
              IEnumerable<Models.Movie> movieData = JsonConvert.DeserializeObject<IEnumerable<Models.Movie>>(jsonString);
 
-            //"[{""name"":""MovieA"",""roles"":[{""name"":""Axel Foley"",""actor"":""Eddie Murphy""},{""name"":""Gorgie Lachance"",""actor"":""Judge Reinhold""},{""name"":""Jenny Summers"",""actor"":""Lisa Eilbacher""},{""name"":""Mikey Tandino"",""actor"":""}]},{""name"":""MovieB"",""roles"":[{""name"":""Billy Rosewood"",""actor"":""Judge Reinhold""},{""name"":""Chris Chambers"",""actor"":""River Phoenix""},{""name"":""Teddy Duchamp"",""actor"":""Corey Feldman""},{""name"":""Ace Merrill"",""actor"":""Keifer Sutherland""},{""name"":""The Writer"",""actor"":""Richard Dreyfuss""}]}]";
-            return Task.FromResult<IEnumerable<Models.Movie>>(movieData);
+            return Task.FromResult(movieData);
         }
+
+
     }
 }

@@ -21,7 +21,6 @@ namespace Film.Test
 
             var output = service.GetAscendingOrder();
 
-            //StringService.GetAscendingOrder(characters);
             Assert.IsInstanceOf<IEnumerable<Models.Actor>>(output);
 
         }
