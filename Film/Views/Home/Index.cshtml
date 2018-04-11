@@ -16,24 +16,22 @@
                     output = index + ' ' + item;
                     $("ul#resultArea").append($("<ul id=" + index + ">"))
 
-                    $.each(item, function (subindex, movieTitle) {
-                        if (subindex == "Name") {
-                            $("ul#" + index).append("<li id='movie" + index + "'>" + movieTitle)
-                            //console.log(movieTitle)
-                        } else {
-                            $("li#movie" + index).append("<ul id='role" + index + "'>")
-                            $.each(movieTitle, function (innerIndex, innerItem) {
-                                $("ul#role" + index).append("<li>" + innerItem["Actor"] + " protrays" + innerItem["Name"] + "</li>")
+                    $.each(item, function (subindex, ActorName) {
+                        if (subindex == "Name") { //Display Actor name
+                            $("ul#" + index).append("<li id='ActorName" + index + "'>" + ActorName)
+                        } else {    //Display role details
+                            $("li#ActorName" + index).append("<ul id='role" + index + "'>")
+                            $.each(ActorName, function (innerIndex, innerItem) {
+                                $("ul#role" + index).append("<li>" + innerItem["Name"] + "</li>")
 
-                                console.log(innerItem["Actor"] + ","  + innerItem["Name"])
                             })
-                            $("li#movie" + index).append("</ul>")
+                            $("li#ActorName" + index).append("</ul>")
 
                         }
                         $("ul#" + index).append("</li>")
                     })
                 });
-                   
+
             },
             error: function (data) {
                 alert("Error ");

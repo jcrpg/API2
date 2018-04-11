@@ -9,6 +9,7 @@ using System.Diagnostics;
 using System.Threading;
 using System.Threading.Tasks;
 using Film.Services;
+using Film.Models;
 
 namespace Film.Controllers
 {
@@ -16,10 +17,17 @@ namespace Film.Controllers
     {
         // GET api/<controller>
 
-        public async Task<List<Movie>> GetMovies()
+        public async Task<IEnumerable<Models.Actor>> GetMovies()
         {
-            var result = WebClientManager.GetItemList().Result;
-            return result;
+            var service = new StringService(new MovieService());
+            var output = service.GetAscendingOrder();
+
+            //var result = await new MovieService().GetItemList();
+            //var restut  = new StringService(new MobieService());
+            //result.GetAscendingOrder
+            //var roles = result.SelectMany(s => s.Roles).OrderBy(m=> m.Name).OrderBy(o => o.Name).GroupBy(g=> g.Actor).Select(s=> new Actor(){ Name = s.Key, Roles = s.ToList() });
+
+            return output;
 
         }
         //public IEnumerable<string> Get()

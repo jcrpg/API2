@@ -5,12 +5,15 @@ using Film.Models;
 using System.Net.Http;
 using System.Net.Http.Headers;
 using System.Web.Http;
+using System.Web.Helpers;
+using Film.Models;
+using Film.Services;
 
 namespace Film.Services
 {
-    public class WebClientManager
+    public class MovieService:IMovieService
     {
-        public static async Task<List<Movie>> GetItemList()
+        public async Task<IEnumerable<Models.Movie>> GetItemList()
         {
 
             try
@@ -23,7 +26,7 @@ namespace Film.Services
                     if (response.IsSuccessStatusCode)
                     {
 
-                        var movieList = response.Content.ReadAsAsync<List<Movie>>().Result;
+                        var movieList = response.Content.ReadAsAsync<List<Models.Movie>>().Result;
 
                         return movieList;
 

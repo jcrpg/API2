@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 using NUnit.Framework;
 using NUnit;
 using Film.Services;
+using Film.Models;
 
 namespace Film.Test
 {
@@ -13,18 +14,24 @@ namespace Film.Test
     public class TestClass
     {
         [Test]
-        public void StringIsAlphaticalOrder()
+        public void Json_Has_Return_Data()
         {
-            string[] characters = new string[] { "A", "B", "C" };
 
-            string[] output = StringService.GetAscendingOrder(characters);
+            var service = new StringService(new MockService());
+
+            var output = service.GetAscendingOrder();
+
+            //StringService.GetAscendingOrder(characters);
+            Assert.IsInstanceOf<IEnumerable<Models.Actor>>(output);
 
         }
 
         [Test]
         public void simpleTest()
         {
+            //A dummy test just to see if the test setup correctly
             Assert.Pass();
         }
+
     }
 }

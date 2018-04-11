@@ -58,8 +58,13 @@
       <Project>{75c2764d-99b4-44ea-854c-c9e3b67c485c}</Project>
       <Name>Film.Services</Name>
     </ProjectReference>
+    <ProjectReference Include="..\Movie.Model\Movie.Model.csproj">
+      <Project>{af3d7776-3792-4670-84aa-bc830889df46}</Project>
+      <Name>Movie.Model</Name>
+    </ProjectReference>
   </ItemGroup>
   <ItemGroup>
+    <None Include="app.config" />
     <None Include="packages.config" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
